@@ -1,3 +1,24 @@
-<p>
-  search-cocktail works!
-</p>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet"> <!--GoogleFont-->
+</head>
+<div class="innerHTML"> 
+<div id="innerHeading">
+
+  <p> What Drink?</p>
+
+</div>
+<mat-card>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Enter Ingredients" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of options" [value]="option">
+          {{ option }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+
+</mat-card>
+
+</div>
