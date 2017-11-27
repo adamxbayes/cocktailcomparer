@@ -9,13 +9,13 @@
 
   </div>
 
-  <mat-card>
+  <mat-card id="ing-card">
     <form class="example-form">
       <mat-form-field class="example-full-width">
-        <input type="text" placeholder="Enter Ingredients" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+        <input type="text" placeholder="Enter Ingredients" aria-label="Number" matInput [formControl]="myControl">
         <mat-autocomplete #auto="matAutocomplete">
-          <mat-option *ngFor="let option of options" [value]="option">
-            {{ option }}
+          <mat-option *ngFor="let ingredient of ingredients" [value]="ingredient">
+            <span> {{ ingredient }} </span>
           </mat-option>
         </mat-autocomplete>
       </mat-form-field>
@@ -23,39 +23,35 @@
     </form>
 
     <form class="example-form">
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="State" aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl">
-          <mat-autocomplete #auto="matAutocomplete">
-            <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
-              <img style="vertical-align:middle;" aria-hidden src="{{state.flag}}" height="25" />
-              <span>{{ state.name }}</span> |
-              <small>Population: {{state.population}}</small>
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
-      
-        <br />
-      
-        <mat-slide-toggle
-          [checked]="stateCtrl.disabled"
-          (change)="stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()">
-          Disable Input?
-        </mat-slide-toggle>
-      </form>
-    
-  </mat-card>
-  <form class="example-form">
       <mat-form-field>
-          <mat-select placeholder="Lemon/Lime Juice?">
-            <mat-option *ngFor="let xyz of foods" [value]="xyz.value">
-              {{ xyz.viewValue }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-        
-        
-</form>
+        <mat-select placeholder="Lemon/Lime Juice?">
+          <mat-option *ngFor="let juice of juices" [value]="juice.value">
+            {{ juice.viewValue }}
+            
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
 
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Glass" aria-label="Glass" [matAutocomplete]="auto" [formControl]="stateCtrl">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let glass of filteredCocktailGlasses | async" [value]="glass.name">
+            <img style="vertical-align:middle;" aria-hidden src="{{glass.flag}}" height="25" />
+            <span>{{ glass.name }}</span>
+
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+      <br />
+
+
+    </form>
+    <div class="big-button"></div>
+    <button id="proceed"> Find me a drink </button>
+  </mat-card>
 
 
 </div>

@@ -9,10 +9,11 @@ body {
     background-blend-mode: lighten;
     padding-top: 0%;
     padding: 17.5%;
+    min-height: 100%;
        
 
 }
-.mat-card{
+.ing-card{
 
     background: rgb(201, 208, 211);
     background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
@@ -25,10 +26,14 @@ body {
     text-align: center;
 }
 
-.innerHTML {
-  
-    min-height: 100%;
+.button#proceed {
+
+    align-content: right;
+    padding-left: 50%;
+
 }
+
+
 .example-form {
     min-width: 150px;
     max-width: 500px;
@@ -37,15 +42,15 @@ body {
     
     
   }
+ .mat-option { /* Drop down options for Lemon/Lime Juice etc */
+    background-color: #b9ec66
+
+ }
   
   .example-full-width {
     width: 100%;
   }
-/* Radio CSS code */
-  .mat-radio-button ~ .mat-radio-button {
-    padding-right: 16px;
-  }
-  
+
   
 
   
