@@ -1,0 +1,17 @@
+{
+  "name": "cocktail-comparer",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Adam Bayes <abayes14@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/adamxbayes/cocktailcomparer",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

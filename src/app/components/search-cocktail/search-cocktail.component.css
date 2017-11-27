@@ -41,10 +41,9 @@ body {
   .example-full-width {
     width: 100%;
   }
-
-  /* material grid styling */
-  mat-grid-tile {
-    background: lightblue;
+/* Radio CSS code */
+  .mat-radio-button ~ .mat-radio-button {
+    padding-right: 16px;
   }
   
   

@@ -2,10 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule, RoutableComponents } from './app-routing.module';
-import {MatAutocompleteModule, MatFormFieldModule, MatInputModule, MatCardModule } from '@angular/material';
-import {MatGridListModule} from '@angular/material/grid-list'; // grid list API import
+import {MatAutocompleteModule, MatFormFieldModule, MatInputModule, MatCardModule, MatDatepickerModule, MatSelectModule, MatSlideToggleModule  } from '@angular/material'; /* Added Radio module */
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/operator/startWith';
+import 'rxjs/add/operator/map';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -21,9 +22,10 @@ import { AppComponent } from './app.component';
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDatepickerModule,
     MatCardModule,
-    //MatGridList
-   // MatGridListModule  
+    MatSlideToggleModule,
+    MatSelectModule, 
     FormsModule,
     ReactiveFormsModule
 
@@ -33,13 +35,8 @@ import { AppComponent } from './app.component';
 })
 export class AppModule { }
 
-//Taken from gridlist .ts API guide...
 
-export class GridListDynamicExample {
-  tiles = [
-    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-  ];
-}
+
+
+
+
