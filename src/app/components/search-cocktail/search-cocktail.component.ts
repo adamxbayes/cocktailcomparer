@@ -63,8 +63,8 @@ export class SearchCocktailComponent implements OnInit {
   toggleGlassware(): void {
     this.showGlassware = !this.showGlassware; //function for hiding the glassware button
     this.showGlassware = false;
-    if (this.showGlassware = false)
-    {}
+    
+    
   
   }
 
