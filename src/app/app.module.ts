@@ -9,7 +9,9 @@ import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
 import { AppComponent } from './app.component';
 
-@NgModule({
+@NgModule 
+//Declare component classes here 
+({
   declarations: [
     AppComponent,
     RoutableComponents,
