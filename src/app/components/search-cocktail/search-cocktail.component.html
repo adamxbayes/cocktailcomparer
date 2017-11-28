@@ -6,7 +6,7 @@
   <div id="innerHeading">
 
     <p> What Drink?</p>
-
+  
   </div>
 
   <mat-card id="ing-card">
@@ -25,9 +25,9 @@
     <form class="example-form">
       <mat-form-field>
         <mat-select placeholder="Lemon/Lime Juice?">
-          <mat-option *ngFor="let juice of juices" [value]="juice.value">
+          <mat-option *ngFor="let juice of juices" [value]="juice.value"> <!-- *ngFor loop gets all instances of the juices object and displays the value property. Saves manually inputting each juice for example. -->
             {{ juice.viewValue }}
-            
+            <img style="vertical-align:middle;" aria-hidden src="{{juice.juiceIcon}}" height="30" /> 
           </mat-option>
         </mat-select>
       </mat-form-field>
@@ -38,7 +38,7 @@
         <input matInput placeholder="Glass" aria-label="Glass" [matAutocomplete]="auto" [formControl]="stateCtrl">
         <mat-autocomplete #auto="matAutocomplete">
           <mat-option *ngFor="let glass of filteredCocktailGlasses | async" [value]="glass.name">
-            <img style="vertical-align:middle;" aria-hidden src="{{glass.flag}}" height="25" />
+            <img *ngIf='showGlassware' style="vertical-align:middle;" aria-hidden src="{{glass.flag}}" height="30" />
             <span>{{ glass.name }}</span>
 
           </mat-option>
@@ -49,9 +49,13 @@
 
 
     </form>
-    <div class="big-button"></div>
-    <button id="proceed"> Find me a drink </button>
-  </mat-card>
+    <div class="glass-hide"></div>
+    <button class='btn hide-glassware'(click)='toggleGlassware()'> 
+      
+      <p> {{showHideText}} Glassware </p></button>
+  
+  
+    </mat-card>
 
 
 </div>

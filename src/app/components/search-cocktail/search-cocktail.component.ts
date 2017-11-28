@@ -13,6 +13,12 @@ export class SearchCocktailComponent implements OnInit {
   filteredCocktailGlasses: Observable<any[]>;
   stateCtrl: FormControl;
 
+  showGlassware: boolean = true; //Bool to control whether glassware shows or not
+  showHideToggle: boolean = true; //Bool for button text controller
+
+ 
+  
+
 //observable...something to do with making continuous requests and not reloading full page?
 
   myControl: FormControl = new FormControl();
@@ -23,42 +29,44 @@ export class SearchCocktailComponent implements OnInit {
     {
       name: 'Old Fashioned/Rocks glass',
       // https://commons.wikimedia.org/wiki/File:Flag_of_Arkansas.svg
-      flag: 'http://svgshare.com/i/43Z.svg'
+      flag: 'http://svgshare.com/i/463.svg'
     },
     {
-      name: 'Hurricane glass',
+      name: 'Champagne glass',
       // https://commons.wikimedia.org/wiki/File:Flag_of_California.svg
-      flag: ''
-    },
-    {
-      name: 'Coupette',
-      // https://commons.wikimedia.org/wiki/File:Flag_of_Florida.svg
-      flag: ''
-    },
-    {
-      name: 'Collins',
-      // https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg
-      flag: ''
-    },
-    {
-      name: 'Wine Glass',
-      // https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg
-      flag: ''
-    },
-    {
-      name: 'Pint glass',
-      // https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg
-      flag: ''
+      flag: 'http://svgshare.com/i/45_.svg'
     },
     {
       name: 'Martini glass',
+      // https://commons.wikimedia.org/wiki/File:Flag_of_Florida.svg
+      flag: 'http://svgshare.com/i/44f.svg'
+    },
+    {
+      name: 'Highball glass',
       // https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg
-      flag: ''
-    }
+      flag: 'http://svgshare.com/i/45Z.svg'
+    },
+    {
+      name: 'Wine glass',
+      // https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg
+      flag: 'http://svgshare.com/i/45C.svg'
+    },
+    {
+      name: 'Shot glass',
+      // https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg
+      flag: 'http://svgshare.com/i/44s.svg'
+    },
+    
   
   ];
 
- 
+  toggleGlassware(): void {
+    this.showGlassware = !this.showGlassware; //function for hiding the glassware button
+    this.showGlassware = false;
+    if (this.showGlassware = false)
+    {}
+  
+  }
 
   filtercocktailGlasses(name: string) {
     return this.cocktailGlasses.filter(glass =>
@@ -69,14 +77,18 @@ export class SearchCocktailComponent implements OnInit {
   juices = [ //Drop down list
     {
        value: 'lemon-0',
-        viewValue: 'Lemon Juice'
+        viewValue: 'Lemon Juice',
+        juiceIcon: 'http://svgshare.com/i/44z.svg'
        },
     {
        value: 'lime-1', 
-       viewValue: 'Lime Juice' 
+       viewValue: 'Lime Juice' ,
+       juiceIcon: 'http://svgshare.com/i/45k.svg'
       },
     
   ];
+
+
 
   ingredients = [
     'Ingredient 1',

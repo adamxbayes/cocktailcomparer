@@ -26,24 +26,24 @@ body {
     text-align: center;
 }
 
-.button#proceed {
-
-    align-content: right;
-    padding-left: 50%;
-
-}
-
-
 .example-form {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
+}
+
+.hide-glassware {
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+    float: right;
     
+}
+.hide-glassware p {
+    font-family: 'Shrikhand', cursive;
+    padding: 5px;
     
-    
-  }
+}
  .mat-option { /* Drop down options for Lemon/Lime Juice etc */
-    background-color: #b9ec66
+    background-color: #fefffb;
 
  }
   
