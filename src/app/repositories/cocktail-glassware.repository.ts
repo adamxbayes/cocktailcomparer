@@ -7,13 +7,13 @@ export class CocktailGlasswareRepository {
 
     private cocktailGlasses: CocktailGlassware[] = [
         new CocktailGlassware('Old Fashioned/Rocks glass', 'http://svgshare.com/i/463.svg'),
-        new CocktailGlassware ('Champagne glass','http://svgshare.com/i/44f.svg'),
-        new CocktailGlassware ('Martini glass','http://svgshare.com/i/44f.svg' ),
-        new CocktailGlassware ('Highball glass', 'http://svgshare.com/i/45Z.svg'),
-        new CocktailGlassware ('Wine glass', 'http://svgshare.com/i/45Z.svg'),
-        new CocktailGlassware ('Shot glass', 'http://svgshare.com/i/44s.svg' )
+        new CocktailGlassware('Champagne glass', 'http://svgshare.com/i/46n.svg'),
+        new CocktailGlassware('Martini glass', 'http://svgshare.com/i/44f.svg'),
+        new CocktailGlassware('Highball glass', 'http://svgshare.com/i/45Z.svg'),
+        new CocktailGlassware('Wine glass', 'http://svgshare.com/i/45G.svg'),
+        new CocktailGlassware('Shot glass', 'http://svgshare.com/i/44s.svg')
 
-     ];
+    ];
 
 
 
@@ -21,6 +21,6 @@ export class CocktailGlasswareRepository {
         return this.cocktailGlasses;
     }
 
-    
+
 
 }
