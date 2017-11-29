@@ -44,8 +44,12 @@ body {
     
 }
  .mat-option { /* Drop down options for Lemon/Lime Juice etc */
-    background-color: #fefffb;
+    background-color: #FFFFFF;
+    color: #ae8b9c;
 
+ }
+ .mat-opton :hover {
+     background-color: #ae8b9c;
  }
   
   .example-full-width {
