@@ -19,7 +19,7 @@ export class SearchCocktailComponent implements OnInit {
   stateCtrl: FormControl;
 
   showGlassware: boolean = true; //Bool to control whether glassware shows or not
-  showHideToggle: boolean = true; //Bool for button text controller
+
 
   //Referencing the models which store instances of objects (drop down lists)
   cocktailGlasses: CocktailGlassware[] = [];
@@ -32,7 +32,7 @@ export class SearchCocktailComponent implements OnInit {
 
   toggleGlassware(): void {
     this.showGlassware = !this.showGlassware; //function for hiding the glassware button
-    //this.showGlassware = false;
+
   }
 
   filtercocktailGlasses(name: string) {

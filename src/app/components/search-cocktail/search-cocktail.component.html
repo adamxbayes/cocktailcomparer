@@ -8,6 +8,11 @@
     <p> What Drink?</p>
 
   </div>
+  <mat-card id="welcome"> 
+    <form class="example-form">
+      <p>Enter your ingredients below and be suggested with a cocktail</p>
+    </form>
+  </mat-card>
 
   <mat-card id="ing-card">
     <form class="example-form">
@@ -29,7 +34,7 @@
             <!-- *ngFor loop gets all instances of the juices object and displays the value property. Saves manually inputting each juice for example. -->
             {{ juice.viewValue | uppercase }}
             <img style="vertical-align:middle;" aria-hidden src="{{juice.juiceIcon}}" height="30" />
-          </mat-option>
+          </mat-option> 
         </mat-select>
       </mat-form-field>
     </form>
