@@ -1,28 +1,24 @@
 import { Injectable } from '@angular/core';
+import { CocktailSours } from '../models/cocktail-sours.model';
+
+
 
 @Injectable()
 
 export class CocktailSourRepository {
-    private juices: any[] = [//Drop down list for lemon and lime juice
-        {
-            value: 'lemon-0',
-            viewValue: 'Lemon Juice',
-            juiceIcon: 'http://svgshare.com/i/44z.svg'
-        },
-        {
-            value: 'lime-1',
-            viewValue: 'Lime Juice',
-            juiceIcon: 'http://svgshare.com/i/45k.svg'
-        },
+    private juices: CocktailSours[] = [//Drop down list for lemon and lime juice
+        new CocktailSours ('lemon-0','Lemon Juice', 'http://svgshare.com/i/44z.svg'),
+        new CocktailSours ('lime-1','Lime Juice', 'http://svgshare.com/i/45k.svg'),
+        
+    
 
     ];
-
-    public getAll(): any {
+public getAll(): CocktailSours[] {
 
         return this.juices;
     }
 
-}
+
 
 
 
