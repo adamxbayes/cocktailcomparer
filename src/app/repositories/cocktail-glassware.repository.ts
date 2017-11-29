@@ -5,12 +5,13 @@ import { CocktailGlassware } from './../models/cocktail-glassware.model';
 export class CocktailGlasswareRepository {
 
     private cocktailGlasses: CocktailGlassware[] = [
-        { name: 'Old Fashioned/Rocks glass', glassImage: 'http://svgshare.com/i/463.svg' },
-        { name: 'Champagne glass', glassImage: 'http://svgshare.com/i/45_.svg' },
-        { name: 'Martini glass', glassImage: 'http://svgshare.com/i/44f.svg' },
-        { name: 'Highball glass', glassImage: 'http://svgshare.com/i/45Z.svg' },
-        { name: 'Wine glass', glassImage: 'http://svgshare.com/i/45C.svg' },
-        { name: 'Shot glass', glassImage: 'http://svgshare.com/i/44s.svg' },
+        new CocktailGlassware('Old Fashioned/Rocks glass', 'http://svgshare.com/i/463.svg'),
+        new CocktailGlassware ('Champagne glass','http://svgshare.com/i/44f.svg'),
+        new CocktailGlassware ('Martini glass','http://svgshare.com/i/44f.svg' ),
+        new CocktailGlassware ('Highball glass', 'http://svgshare.com/i/45Z.svg'),
+        new CocktailGlassware ('Wine glass', 'http://svgshare.com/i/45Z.svg'),
+        new CocktailGlassware ('Shot glass', 'http://svgshare.com/i/44s.svg' )
+
      ];
 
 
