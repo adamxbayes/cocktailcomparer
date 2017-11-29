@@ -39,7 +39,7 @@
         <input matInput placeholder="Glass" aria-label="Glass" [matAutocomplete]="auto" [formControl]="stateCtrl">
         <mat-autocomplete #auto="matAutocomplete">
           <mat-option *ngFor="let glass of filteredCocktailGlasses | async" [value]="glass.name">
-            <img *ngIf='showGlassware' style="vertical-align:middle;" aria-hidden src="{{glass.flag}}" height="30" />
+            <img *ngIf='showGlassware' style="vertical-align:middle;" aria-hidden src="{{glass.glassImage}}" height="30" />
             <span>{{ glass.name | uppercase }}</span>
 
           </mat-option>
@@ -57,7 +57,7 @@
       <p> {{showGlassware ? 'Hide' : 'Show'}} Glassware </p>
     </button>
 
-  
+
 
 
   </mat-card>
